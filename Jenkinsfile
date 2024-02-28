@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo  'hai linh'
+                echo  'hai linh xinh'
             }
         }
     }
