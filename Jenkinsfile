@@ -9,5 +9,15 @@ pipeline {
                 echo  'hai linh'
             }
         }
+        stage('read Readme') {
+            when {
+                branch "fix-*"
+            }
+            steps {
+                sh '''
+                cat README.md
+                '''
+            }
+        }
     }
 }
