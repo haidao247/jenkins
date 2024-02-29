@@ -6,7 +6,17 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo  'hai linh xinh'
+                echo  'hai linh main'
+            }
+        }
+        stage('read Readme') {
+            when {
+                branch "fix-*"
+            }
+            steps {
+                sh '''
+                cat README.md
+                '''
             }
         }
     }
